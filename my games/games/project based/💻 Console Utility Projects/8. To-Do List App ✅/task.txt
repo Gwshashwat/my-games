@@ -1,0 +1,8 @@
+sleep (Completed)
+wake up (Completed)
+eat (Completed)
+sleep (Completed)
+wake up (Completed)
+eat (Completed)
+coaching (Completed)
+coding (Completed)
