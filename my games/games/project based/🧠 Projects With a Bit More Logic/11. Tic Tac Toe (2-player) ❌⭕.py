@@ -99,9 +99,10 @@ while True:
 
     com = int(input("ENTER :\n1. 1 PLAYER\n2. 2 PLAYER\n3. QUIT\nENTER YOUR CHOICE : "))
 
-    print_board()
-
     if com == 2 :
+
+        print_board()
+        
         player_1_wins = 0
         player_2_wins = 0
         robot_wins = 0
@@ -109,8 +110,14 @@ while True:
             
             player = moves % 2
             if player == 1 :
-                move = int(input("Player 1 : "))
-                make_move(move,"X")
+                move = input("Player 1 (q to quite) : ")
+                if move == "q" :
+                    break
+                else :
+                    try :
+                        make_move(int(move),"X")
+                    except ValueError :
+                        print("Invalid move.")
 
             else:
                 move = int(input("Player 2 : "))
@@ -121,6 +128,9 @@ while True:
             print_board()
 
     elif com == 1 :
+
+        print_board()
+        
         player_1_wins = 0
         player_2_wins = 0
         robot_wins = 0
@@ -128,9 +138,14 @@ while True:
             
             player = moves % 2
             if player == 1 :
-                move = int(input("Player 1 : "))
-                make_move(move,"X")
-
+                move = input("Player 1 (q to quite) : ")
+                if move == "q" :
+                    break
+                else :
+                    try :
+                        make_move(int(move),"X")
+                    except ValueError :
+                        print("Invalid move.")
             else:
                 avalaible_moves = []
                 if sq_1 == 1 :
